@@ -7,7 +7,7 @@ import ProductDetailView from "@/components/ProductDetailView/ProductDetailView"
 import { OrderItemDTO } from "@/store/types/order.types";
 import styles from "./page.module.scss";
 
-export default async function Page({ params }: { params: number }) {
+export default async function Page({ params }: { params: any }) {
 	const data: ProductDTO = await Api.products.findOne(params.id);
 
 	return (

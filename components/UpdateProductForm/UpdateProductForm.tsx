@@ -35,7 +35,7 @@ export default function UpdateProductForm({ id, props } : { id: number, props: P
 				description: 'Товар обновлён',
 				duration: 2,
 			});
-		} catch (err) {
+		} catch (err: any) {
 			notification.error({
 				message: "Ошибка",
 				description: err.response.data.message,

@@ -44,7 +44,7 @@ export default function Register() {
 			setCookie(null, "_token", accessToken, {path: '/'});
 
 			location.href = '/store';
-		} catch (err: unknown) {
+		} catch (err: any) {
 			notification.error({
 				message: "Ошибка",
 				description: err.response.data.message,

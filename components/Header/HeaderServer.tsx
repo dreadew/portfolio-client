@@ -1,4 +1,4 @@
-"use server";
+/*"use server";
 
 import { GetServerSidePropsContext } from "next/types";
 import Header from "./Header";
@@ -11,4 +11,4 @@ export default async function HeaderServer() {
 			<Header isAuthorized={isAuthorized} />
 		</>
 	)
-}
+}*/

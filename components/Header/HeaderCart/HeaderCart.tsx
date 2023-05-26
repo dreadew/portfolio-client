@@ -8,7 +8,7 @@ import { OrderItemDTO } from "@/store/types/order.types";
 import { notification } from "antd";
 
 export default function HeaderCart({ active }: { active: boolean }) {
-	const [items, setItems] = useState<OrderItemDTO[]>();
+	const [items, setItems] = useState<OrderItemDTO[]>([]);
 	const handleOrder = async () => {
 		try {
 			"use server";
@@ -32,7 +32,7 @@ export default function HeaderCart({ active }: { active: boolean }) {
 				description: 'Заказ создан',
 				duration: 2,
 			});
-		} catch (err) {
+		} catch (err: any) {
 			notification.error({
 				message: "Ошибка",
 				description: err.response.data.message,

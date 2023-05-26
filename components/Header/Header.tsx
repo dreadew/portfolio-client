@@ -7,6 +7,7 @@ import { useState } from "react";
 import * as Api from '@/api';
 
 export default function Header({ isAuthorized }: { isAuthorized: boolean }) {
+
 	const [active, setActive] = useState<boolean>(false);
 
 	const logout = () => {
