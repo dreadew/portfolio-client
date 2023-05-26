@@ -1,0 +1,37 @@
+.form {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	row-gap: .75rem;
+	&-input__wrapper {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		row-gap: .5rem;
+	}
+	&-input {
+		outline: transparent;
+		border: transparent;
+		padding-bottom: .5rem;
+		border-bottom: 1px solid #9c9c9c;
+		resize: none;
+		width: 100%;
+	}
+	&-label {
+		font-size: .75rem;
+		color: #232323;
+	}
+	&-button {
+		outline: transparent;
+		border: transparent;
+		color: #fff;
+		background-color: #232323;
+		padding: .5rem 1rem;
+		border-radius: .425rem;
+		cursor: pointer;
+		transition: .3s;
+		&:hover {
+			opacity: .9;
+		}
+	}
+}

@@ -1,0 +1,8 @@
+.wrapper {
+	padding-top: 5rem;
+	height: 100vh;
+	padding-left: var(--container-padding);
+	padding-right: var(--container-padding);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
