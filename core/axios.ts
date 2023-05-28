@@ -3,9 +3,9 @@ import { parseCookies } from "nookies";
 
 let cancelTokenSource = axios.CancelToken.source();
 
-//axios.defaults.baseURL = "http://45.12.74.211:7777";
+axios.defaults.baseURL = "http://45.12.74.211:7777";
 
-axios.defaults.baseURL = "http://localhost:7777";
+//axios.defaults.baseURL = "http://localhost:7777";
 
 axios.interceptors.request.use(config => {
 	if (typeof window !== "undefined") {

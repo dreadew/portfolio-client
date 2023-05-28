@@ -26,7 +26,7 @@ export default function ProductGrid({ products }: { products: ProductDTO[] }) {
 			<div className={styles["product-grid"]}>
 				{	products?.map(product => (
 						<div className={styles["product-grid__item"]} key={`${product.id}`}>
-							<Image className={styles["product-grid__item-image"]} src={`http://localhost:7777/files/${product.images[0]}`} alt="" width={450} height={450} style={{objectFit: "cover"}} />
+							<Image className={styles["product-grid__item-image"]} src={`http://45.12.74.211:7777/files/${product.images[0]}`} alt="" width={450} height={450} style={{objectFit: "cover"}} />
 							<h1 className={styles["product-grid__item-title"]}>{product.title}</h1>
 							<p className={styles["product-grid__item-description"]}>{product.Category.name}</p>
 							<p className={styles["product-grid__item-description"]}>{product.description}</p>
