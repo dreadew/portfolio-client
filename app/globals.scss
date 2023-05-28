@@ -14,6 +14,17 @@
   --clr-border: rgba(219, 219, 219);
   --shadow-focus: rgba(59,130,246,.25);
   --container-padding: 12rem;
+
+  --font-size-600: 6rem;
+  --font-size-400: 4rem;
+  --font-size-300: 3rem;
+  --font-size-200: 2rem;
+  --font-size-175: 1.75rem;
+  --font-size-150: 1.5rem;
+  --font-size-125: 1.25rem;
+  --font-size-100: 1rem;
+  --font-size-0875: .875rem;
+  --font-size-075: .75rem;
 }
 
 * {
@@ -39,7 +50,7 @@ img, video {
   pointer-events: none;
 }
 
-input {
+input, textarea {
   transition: .3s;
   &:hover {
     background-color: var(--clr-hover);
@@ -54,23 +65,54 @@ input {
 @media screen and (max-width: 1280px) {
   :root {
     --container-padding: 4rem;
+
+    --font-size-600: 5rem;
+    --font-size-400: 3.5rem;
+    --font-size-300: 2.5rem;
+    --font-size-200: 1.75rem;
+    --font-size-175: 1.5rem;
+    --font-size-150: 1.25rem;
+    --font-size-125: 1rem;
+    --font-size-100: 1rem;
+    --font-size-0875: .875rem;
+    --font-size-075: .75rem;
   }
 }
 
 @media screen and (max-width: 1024px) {
   :root {
     --container-padding: 3rem;
+
+    --font-size-600: 4.5rem;
+    --font-size-400: 3rem;
+    --font-size-300: 2rem;
+    --font-size-200: 1.5rem;
+    --font-size-175: 1.25rem;
+    --font-size-150: 1rem;
+    --font-size-125: .875rem;
+    --font-size-100: .875rem;
+    --font-size-0875: .875rem;
+    --font-size-075: .75rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   :root {
     --container-padding: 2rem;
+
+    --font-size-600: 4rem;
+    --font-size-400: 3rem;
+    --font-size-300: 2rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   :root {
     --container-padding: 1rem;
+
+    --font-size-600: 3rem;
+    --font-size-400: 2.5rem;
+    --font-size-300: 1.75rem;
+    --font-size-125: .75rem;
   }
 }

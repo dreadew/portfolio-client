@@ -54,17 +54,17 @@ export default function Auth() {
 		<main className={styles.page}>
 			<div className={styles["page-wrapper"]}>
 				<div className={styles["page-wrapper__text"]}>
-					<h1 className={styles["page-wrapper__text-title"]}>Log in</h1>
-					<p className={styles["page-wrapper__text-description"]}>Haven't joined our community? <Link href="/dashboard/register">Register</Link></p>
+					<h1 className={styles["page-wrapper__text-title"]}>Авторизация</h1>
+					<p className={styles["page-wrapper__text-description"]}>Нет акаунта? <Link href="/dashboard/register">Зарегистрироваться</Link></p>
 				</div>
 				<form className={styles["page-wrapper__form"]} onSubmit={handleSubmit}>
 					<div className={styles["page-wrapper__form-container"]}>
-						<input className={styles["page-wrapper__form-container-input"]} type="email" name="email" placeholder="Enter your e-mail" />
+						<input className={styles["page-wrapper__form-container-input"]} type="email" name="email" placeholder="Эл. почта" />
 					</div>
 					<div className={styles["page-wrapper__form-container"]}>
-						<input className={styles["page-wrapper__form-container-input"]} type="password" name="password" placeholder="Enter your password" />
+						<input className={styles["page-wrapper__form-container-input"]} type="password" name="password" placeholder="Пароль" />
 					</div>
-					<button className={styles["page-wrapper__form-button"]}>Log in</button>
+					<button className={styles["page-wrapper__form-button"]}>Войти</button>
 				</form>
 			</div>
 			<div className={styles["page-image"]}>

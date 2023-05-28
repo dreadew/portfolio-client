@@ -61,14 +61,14 @@ export default function ProductSearch() {
 	return (
 		<>
 			<div className={styles.wrapper}>
-        <h1 className={styles["wrapper-title"]}>Поиск продуктов</h1>
+        <h1 className={styles["wrapper-title"]}>Поиск товаров</h1>
 				<Input
           className={styles["wrapper-search"]}
 					value={inputValue}
 					onChange={(e) => {
 						setInputValue(e.target.value)
 					}}
-					placeholder="Search products"
+					placeholder="Название товара"
 				/>
 			</div>
 		</>

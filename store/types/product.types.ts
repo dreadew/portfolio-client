@@ -3,12 +3,24 @@ export type ProductDTO = {
 	title: string
 	description: string
 	price: number
-	imageUrl: string
+	images: string[]
+	Category: {
+		id: number,
+		name: string,
+		slug: string
+	}
 }
 
 export type UpdateProductDTO = {
 	title?: string
 	description?: string,
 	price?: number,
-	imageUrl?: string
+	files: File
+}
+
+export type CreateProductDTO = {
+	title?: string
+	description?: string,
+	price?: number,
+	files: File
 }

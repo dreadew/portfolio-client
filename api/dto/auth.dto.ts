@@ -4,6 +4,11 @@ export interface LoginFormDto {
 }
 
 export interface LoginResponseDto {
+	user: {
+		id: number,
+		email: string,
+		name: string
+	},
 	accessToken: string,
 	refreshToken: string
 }

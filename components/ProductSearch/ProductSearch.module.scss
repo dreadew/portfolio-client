@@ -4,14 +4,17 @@
 	align-items: flex-start;
 	row-gap: .75rem;
 	&-title {
-		font-size: 2rem;
+		font-size: var(--font-size-200);
 	}
 	&-search {
-		min-width: 25rem;
+		width: 100%;
 		padding: 1rem 1rem;
 		border: 2px solid var(--clr-primary-350);
 		outline: transparent;
 		border-radius: .5rem;
 		font-weight: 600;
+		&::placeholder {
+			color: var(--clr-primary-300);
+		}
 	}
 }

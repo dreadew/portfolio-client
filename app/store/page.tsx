@@ -1,13 +1,13 @@
 "use server";
 
 import * as Api from '@/api';
-import { ProductDTO } from "@/store/types/product.types";;
 import React from "react";
 import ProductGrid from '../../components/ProductGrid/ProductGrid';
 import styles from "./page.module.scss";
 import ProductSearch from '@/components/ProductSearch/ProductSearch';
 import { checkAuth } from '@/utils/checkAuth';
 import { redirect } from 'next/navigation';
+import { ProductDTO } from '@/store/types/product.types';
 
 export default async function Store({ searchParams } : {
 	searchParams: { searchTerm?: string }
@@ -20,7 +20,7 @@ export default async function Store({ searchParams } : {
 	const searchQuery = searchParams.searchTerm ?? "";
 
 	// Get Initial Data
-	const data = await Api.products.findAll(searchQuery);
+	const data: ProductDTO[] = await Api.products.findAll(searchQuery);
 
 	return (
 		<>

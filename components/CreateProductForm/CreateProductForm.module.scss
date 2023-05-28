@@ -1,6 +1,8 @@
 .product-wrapper {
 	min-height: 70vh;
 	width: 100%;
+	padding-left: var(--container-padding);
+	padding-right: var(--container-padding);
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -40,7 +42,7 @@
 			display: flex;
 			column-gap: .75rem;
 			&-text {
-				font-size: .875rem;
+				font-size: var(--font-size-0875);
 				color: var(--clr-primary-300);
 			}
 			&-btn {
@@ -48,7 +50,7 @@
 				outline: transparent;
 				background-color: transparent;
 				color: var(--clr-focus);
-				font-size: .875rem;
+				font-size: var(--font-size-0875);
 				cursor: pointer;
 				transition: .3s;
 				&:hover {
@@ -57,14 +59,14 @@
 			}
 		}
 		&-label {
-			font-size: .75rem;
+			font-size: var(--font-size-075);
 			color: var(--clr-primary-200);
 		}
 		&-button {
 			width: 100%;
 			border: transparent;
 			outline: transparent;
-			font-size: var(--font-size-125);
+			font-size: 1.25rem;
 			padding: 1rem 1rem;
 			background-color: var(--clr-primary-200);
 			color: var(--clr-bg-200);

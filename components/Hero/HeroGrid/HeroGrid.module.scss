@@ -23,7 +23,7 @@
 		background-color: transparent;
 		border: 2px solid var(--clr-primary-350);
 		color: var(--clr-primary-200);
-		font-size: 1.5rem;
+		font-size: var(--font-size-150);
 		cursor: pointer;
 		grid-column: 1 / 2;
 		transition: .3s;

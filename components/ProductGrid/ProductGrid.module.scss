@@ -1,24 +1,57 @@
+.product-buttons {
+	display: flex;
+	column-gap: 1.25rem;
+	&__btn {
+		width: max-content;
+		border: transparent;
+		outline: transparent;
+		font-size: var(--font-size-125);
+		padding: 1rem 1rem;
+		border: 1px solid transparent;
+		background-color: var(--clr-primary-200);
+		color: var(--clr-bg-200);
+		border-radius: .5rem;
+		transition: .3s;
+		cursor: pointer;
+		&:hover {
+			opacity: .9;
+		}
+		&.secondary {
+			background-color: transparent;
+			color: var(--clr-primary-200);
+			&:hover {
+				background-color: var(--clr-hover);
+				border-color: var(--clr-primary-350);
+			}
+		}
+	}
+}
+
 .product-grid {
 	display: flex;
 	column-gap: 1.5rem;
+	row-gap: 1.5rem;
 	flex-wrap: wrap;
 	&__item {
 		display: flex;
 		flex-direction: column;
-		row-gap: .25rem;
+		row-gap: .5rem;
+		&-image {
+			border-radius: 1rem;
+		}
 		&-title {
-			font-size: 2rem;
+			font-size: var(--font-size-200);
 		}
 		&-description {
-			font-size: .875rem;
-			color: rgba(0, 0, 0, 0.562);
+			font-size: var(--font-size-0875);
+			color: var(--clr-bg-300);
 		}
 		&-wrapper {
 			display: flex;
 			align-items: center;
 			column-gap: .5rem;
 			&-text {
-				font-size: .875rem;
+				font-size: var(--font-size-0875);
 			}
 			&-button {
 				outline: transparent;
@@ -28,6 +61,7 @@
 				padding: 1rem 1.5rem;
 				border-radius: .425rem;
 				border: 1px solid transparent;
+				font-size: var(--font-size-100);
 				cursor: pointer;
 				transition: .3s;
 				&:hover {

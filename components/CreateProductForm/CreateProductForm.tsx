@@ -1,13 +1,12 @@
 "use client";
 
 import * as Api from '@/api';
-import { ProductDTO } from '@/store/types/product.types';
 import { notification } from 'antd';
-import styles from "./UpdateProductForm.module.scss";
+import styles from "./CreateProductForm.module.scss";
 import { ReturnCategoryResponse } from '@/api/dto/category.dto';
 import { useState } from 'react';
 
-export default function UpdateProductForm({ id, props, categories } : { id: number, props: ProductDTO, categories: Array<ReturnCategoryResponse> }) {
+export default function CreateProductForm({ categories }: { categories: Array<ReturnCategoryResponse> }) {
 	const [categoryId, setCategoryId] = useState<string>("");
 
 	async function handleSubmit(event: any) {
@@ -17,8 +16,8 @@ export default function UpdateProductForm({ id, props, categories } : { id: numb
 			"title": String(event.target.title.value),
 			"description": String(event.target.description.value),
 			"price": Number(event.target.price.value),
-			"categoryId": Number(event.target.categoryId.value),
-			"files": event.target.file.files[0]
+			"categoryId": +categoryId,
+			"files": event.target.file.files[0],
 		};
 
 		if (data.title === '' || data.description === '' || data.price === null || categoryId === "" || !categories.filter(item => item.id === +categoryId)) {
@@ -33,7 +32,7 @@ export default function UpdateProductForm({ id, props, categories } : { id: numb
 		try {
 			"use server";
 
-			const response = await Api.products.update(id, data);
+			const response = await Api.products.create(data);
 
 			notification.success({
 				message: "Успешно",
@@ -50,16 +49,16 @@ export default function UpdateProductForm({ id, props, categories } : { id: numb
 	}
 	return (
 		<div className={styles["product-wrapper"]}>
-			<h1 className={styles["product-wrapper-title"]}>Обновление товара</h1>
+			<h1 className={styles["product-wrapper-title"]}>Создать товар</h1>
 			<form className={styles["product-wrapper-form"]} onSubmit={handleSubmit}>
 				<div className={styles["product-wrapper-form-input__wrapper"]}>
-					<input className={styles["product-wrapper-form-input"]} name="title" placeholder={`Название: ${props.title}`} />
+					<input className={styles["product-wrapper-form-input"]} name="title" placeholder={'Название товара'} />
 				</div>
 				<div className={styles["product-wrapper-form-input__wrapper"]}>
-					<textarea className={styles["product-wrapper-form-input"]} name="description" placeholder={`Описание: ${props.description}`} />
+					<textarea className={styles["product-wrapper-form-input"]} name="description" placeholder={'Описание товара'} />
 				</div>
 				<div className={styles["product-wrapper-form-input__wrapper"]}>
-					<input className={styles["product-wrapper-form-input"]} name="categoryId" value={categoryId} onChange={(e) => setCategoryId(String(e.target.value))} placeholder={'ID категории'} />
+					<input className={styles["product-wrapper-form-input"]} name="categoryId" value={categories.filter(item => item.id === +categoryId)[0]?.name || categoryId} onChange={(e) => setCategoryId(String(e.target.value))} placeholder={'ID категории'} />
 					<div className={styles["product-wrapper-form-content__wrapper"]}>
 						<p className={styles["product-wrapper-form-content__wrapper-text"]}>Доступные категории: </p>
 						{ categories.map(item => (
@@ -71,9 +70,9 @@ export default function UpdateProductForm({ id, props, categories } : { id: numb
 					<input className={styles["product-wrapper-form-input"]} name="file" type="file" multiple />
 				</div>
 				<div className={styles["product-wrapper-form-input__wrapper"]}>
-					<input className={styles["product-wrapper-form-input"]} name="price" placeholder={`Цена: ${props.price}`} />
+					<input className={styles["product-wrapper-form-input"]} name="price" placeholder={'Цена'} />
 				</div>
-				<button className={styles["product-wrapper-form-button"]} type="submit">Обновить</button>
+				<button className={styles["product-wrapper-form-button"]} type="submit">Создать</button>
 			</form>
 		</div>
 	);

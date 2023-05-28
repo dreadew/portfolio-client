@@ -13,7 +13,7 @@ export default function CartList({ active, setItems }: { active: boolean, setIte
 	}, [items])
 	return (
 		<>
-			<li className={styles["wrapper-list__item"]}>Shopping cart</li>
+			<li className={styles["wrapper-list__item"]}>Корзина</li>
 					{
 						items?.map(item => (
 							<div className={styles["wrapper-list__container"]} key={item.productId}>
@@ -31,7 +31,7 @@ export default function CartList({ active, setItems }: { active: boolean, setIte
 							</div>
 						))
 					}
-				<li className={styles["wrapper-list__item-total"]}>Total: { total }</li>
+				<li className={styles["wrapper-list__item-total"]}>Итог: { total }</li>
 		</>
 	)
 }

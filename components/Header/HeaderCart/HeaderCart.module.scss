@@ -1,8 +1,9 @@
 .wrapper {
 	position: absolute;
-	top: 0;
-	right: 0;
-	outline: 1px solid black;
+	top: 100%;
+	right: 120%;
+	background-color: var(--clr-bg-200);
+	outline: 1px solid var(--clr-primary-350);
 	padding: 1.5rem 2rem;
 	transform: translate(60%, 20%);
 	border-radius: .75rem;
@@ -23,9 +24,9 @@
 		&__button {
 			outline: transparent;
 			border: transparent;
-			background-color: black;
-			padding: .5rem .75rem;
-			color: #fff;
+			background-color: var(--clr-primary-200);
+			padding: 1rem .75rem;
+			color: var(--clr-bg-200);
 			cursor: pointer;
 			border-radius: .25rem;
 			transition: .3s;
@@ -34,13 +35,13 @@
 			}
 		}
 		&__item {
-			font-size: 1.5rem;
+			font-size: var(--font-size-150);
 			font-weight: 600;
 			list-style: none;
 			&-total {
 				list-style: none;
 				font-weight: 500;
-				font-size: 1rem;
+				font-size: var(--font-size-100);
 			}
 		}
 		&__container {
@@ -55,9 +56,9 @@
 				&-button {
 					outline: transparent;
 					border: transparent;
-					background-color: black;
+					background-color: var(--clr-primary-200);
 					padding: .25rem .5rem;
-					color: #fff;
+					color: var(--clr-bg-200);
 					cursor: pointer;
 					border-radius: .25rem;
 					transition: .3s;
@@ -73,5 +74,11 @@
 				list-style: none;
 			}
 		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.wrapper {
+
 	}
 }

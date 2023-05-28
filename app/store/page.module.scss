@@ -1,9 +1,17 @@
 .wrapper {
 	padding-top: 5rem;
-	height: 100vh;
+	min-height: 100vh;
 	padding-left: var(--container-padding);
 	padding-right: var(--container-padding);
+	padding-top: calc(var(--container-padding)*0.5);
+	padding-bottom: calc(var(--container-padding)*0.5);
 	display: flex;
 	flex-direction: column;
 	row-gap: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+	.wrapper {
+		padding-top: 5rem;
+	}
 }

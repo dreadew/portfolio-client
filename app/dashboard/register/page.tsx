@@ -57,24 +57,24 @@ export default function Register() {
 		<main className={styles.page}>
 			<div className={styles["page-wrapper"]}>
 				<div className={styles["page-wrapper__text"]}>
-					<h1 className={styles["page-wrapper__text-title"]}>Join us</h1>
-					<p className={styles["page-wrapper__text-description"]}>Already have an account? <Link href="/dashboard/auth">Login</Link></p>
+					<h1 className={styles["page-wrapper__text-title"]}>Регистрация</h1>
+					<p className={styles["page-wrapper__text-description"]}>Уже есть аккаунт? <Link href="/dashboard/auth">Войти</Link></p>
 				</div>
 				<form className={styles["page-wrapper__form"]}
 				onSubmit={handleSubmit}>
 					<div className={styles["page-wrapper__form-container"]}>
-						<input className={styles["page-wrapper__form-container-input"]} type="email" name="email" placeholder="Enter your e-mail" />
+						<input className={styles["page-wrapper__form-container-input"]} type="email" name="email" placeholder="Эл. почта" />
 					</div>
 					<div className={styles["page-wrapper__form-container"]}>
-						<input className={styles["page-wrapper__form-container-input"]} type="name" name="name" placeholder="Enter your name" />
+						<input className={styles["page-wrapper__form-container-input"]} type="name" name="name" placeholder="Имя" />
 					</div>
 					<div className={styles["page-wrapper__form-container"]}>
-						<input className={styles["page-wrapper__form-container-input"]} type="password" name="password" placeholder="Enter your password" />
+						<input className={styles["page-wrapper__form-container-input"]} type="password" name="password" placeholder="Пароль" />
 					</div>
 					<div className={styles["page-wrapper__form-container"]}>
-						<input className={styles["page-wrapper__form-container-input"]} type="password" name="password2" placeholder="Repeat your password" />
+						<input className={styles["page-wrapper__form-container-input"]} type="password" name="password2" placeholder="Подтверждение пароля" />
 					</div>
-					<button className={styles["page-wrapper__form-button"]}>Submit</button>
+					<button className={styles["page-wrapper__form-button"]}>Зарегистрироваться</button>
 				</form>
 			</div>
 			<div className={styles["page-image"]}>

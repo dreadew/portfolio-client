@@ -16,11 +16,11 @@
 			flex-direction: column;
 			row-gap: .75rem;
 			&-title {
-				font-size: 4rem;
+				font-size: var(--font-size-400);
 				color: var(--clr-bg-200);
 			}
 			&-description {
-				font-size: 1rem;
+				font-size: var(--font-size-100);
 				color: var(--clr-primary-300);
 				line-height: 175%;
 			}
@@ -30,7 +30,7 @@
 			background-color: var(--clr-bg-200);
 			color: var(--clr-primary-200);
 			border-radius: 1rem;
-			font-size: 1.75rem;
+			font-size: var(--font-size-175);
 			transition: .3s;
 			&:hover {
 				opacity: .9;
@@ -48,6 +48,15 @@
 			object-fit: cover;
 			max-width: 71%;
 			height: 461px;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.card {
+		padding: 2rem;
+		&-image {
+			display: none;
 		}
 	}
 }

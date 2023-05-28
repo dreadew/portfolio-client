@@ -44,7 +44,7 @@ export default function HeaderCart({ active }: { active: boolean }) {
 		<div className={active ? `${styles.wrapper} ${styles.active}` : styles.wrapper}>
 			<ul className={styles["wrapper-list"]}>
 				<CartList active={active} setItems={setItems} />
-				<button onClick={handleOrder} className={styles['wrapper-list__button']}>Order now</button>
+				<button onClick={handleOrder} className={styles['wrapper-list__button']}>Оформить заказ</button>
 			</ul>
 		</div>
 	)
